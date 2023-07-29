@@ -12,6 +12,8 @@ Repository for Binary Bots Team Alpha's codebase for the Adobe AI-Thon 2023
 Create an express page and express your learnings.
 
 # Structure
+
+- `docs`: internal documentation regarding the development process
 - `tagging`: code related to tagging entities, shared across as a module to be used
 - `reporting`: code related to report generation via txt files and/or CSV files.
 - `question<N>`: application code for each of the given question where N is the question number
