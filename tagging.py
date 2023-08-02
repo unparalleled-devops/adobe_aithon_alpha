@@ -1,8 +1,4 @@
-import os
-import time
-import numpy as np
 from ultralytics import YOLO
-from PIL import Image
 
 
 class Tagging:
