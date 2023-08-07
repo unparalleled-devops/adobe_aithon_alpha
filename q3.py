@@ -7,9 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/1nxVoe87QpanukbM0m1U2UBGnMCNTzNu1
 """
 
-!pip install ultralytics
 
-'''Oh boy, look at all those modules. I sure hope it won't take that long to write.
+
+'''
+
 '''
 from ultralytics import YOLO
 from PIL import Image
@@ -17,8 +18,8 @@ import pandas as pd
 import os
 import time
 import math
-from google.colab import drive
-drive.mount('/content/drive',force_remount=False)
+import time
+
 
 
 #Setting up yolo model and analysing all images
@@ -90,14 +91,8 @@ for i in range(0,len(results)):
 with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
     print(df)
 
-from ultralytics import YOLO
-from PIL import Image
-import numpy as np
-import pandas as pd
-import os
-import time
-from google.colab import drive
-drive.mount('/content/drive',force_remount=False)
+
+
 '''
 Over here we setting up the model variable which will be using the YOLO module
 'results' acts as an inference of the model which is trained on the yolov8m.pt dataset
@@ -129,8 +124,7 @@ import numpy as np
 import pandas as pd
 import os
 import time
-from google.colab import drive
-drive.mount('/content/drive',force_remount=False)
+
 '''
 Over here we setting up the model variable which will be using the YOLO module
 'results' acts as an inference of the model which is trained on the yolov8m.pt dataset
