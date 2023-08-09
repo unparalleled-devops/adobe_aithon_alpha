@@ -28,8 +28,9 @@ def create_boxed_images(results):
         base_path = os.path.basename(result.path)
 
         # Convert result.plot() to a NumPy array and apply BGR conversion
-        boxed_image_array = np.array(result.plot()[:, :, ::-1])
-        boxed_image = Image.fromarray(boxed_image_array.astype(np.uint8))
+        # by flipping the third axis
+        image_array = result.plot()
+        boxed_image = Image.fromarray(np.flip(image_array, 2))
 
         boxed_image.save(f"boxed_images/boxed_{base_path}")
 
@@ -41,7 +42,7 @@ def create_boxed_images(results):
 
 # driver code for question 1
 def main():
-    tag = tagging.Tagging("../data/All_Images")
+    tag = tagging.Tagging("data/All_Images")
     results = tag.tag_images()
     create_boxed_images(results)
 
